@@ -30,10 +30,10 @@ class WeatherInfoService {
 
             //build and return list of items of interest:
             [infoItems: [
-                    new TemperatureItem(jsonMap.main.temp),
-                    new DescriptionItem(jsonMap.weather[0].description),
-                    new WindSpeedItem(jsonMap.wind.speed),
-                    new PressureItem(jsonMap.main.pressure) ],
+                    new TemperatureItem((float)(jsonMap.main.temp)),
+                    new DescriptionItem((String)(jsonMap.weather[0].description)),
+                    new WindSpeedItem((float)(jsonMap.wind.speed)),
+                    new PressureItem((float)(jsonMap.main.pressure)) ],
              locationName: jsonMap.name,
              locationUrl : latLonToMapUrl(jsonMap.coord.lat, jsonMap.coord.lon)]
         }

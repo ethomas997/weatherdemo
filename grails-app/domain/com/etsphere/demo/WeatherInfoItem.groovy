@@ -6,7 +6,7 @@ package com.etsphere.demo
  */
 class WeatherInfoItem {
 
-    String dataText
+    String dataText = ''
     String description = ''
     String suffix = ''
 
