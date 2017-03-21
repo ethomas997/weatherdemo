@@ -12,7 +12,8 @@ class WeatherInfoController {
      * Queries WeatherInfoService with 'params.zipcode' value and shows response.
      */
     def index() {
-        respond([zipcode: params.zipcode, weatherInfoData: weatherInfoService.getWeatherInfo(params.zipcode)])
+        respond([zipcode: params.zipcode,
+                   weatherInfoData: weatherInfoService.getWeatherInfo((String)(params.zipcode))])
      }
 
     /**

@@ -35,7 +35,7 @@ class WeatherInfoService {
                     new WindSpeedItem((float)(jsonMap.wind.speed)),
                     new PressureItem((float)(jsonMap.main.pressure)) ],
              locationName: jsonMap.name,
-             locationUrl : latLonToMapUrl(jsonMap.coord.lat, jsonMap.coord.lon)]
+             locationUrl : latLonToMapUrl((float)(jsonMap.coord.lat), (float)(jsonMap.coord.lon))]
         }
         catch(IOException ex) {
             []          //if error then return empty list
