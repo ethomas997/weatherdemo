@@ -37,6 +37,9 @@ class WeatherInfoService {
              locationName: jsonMap.name,
              locationUrl : latLonToMapUrl(jsonMap.coord.lat, jsonMap.coord.lon)]
         }
+        catch(IOException ex) {
+            []          //if error then return empty list
+        }
         catch(Exception ex) {
             ex.printStackTrace()
             []          //if error then return empty list
